@@ -1,7 +1,10 @@
 buildscript {
 	repositories {
-		jcenter()
-		maven { url = "http://files.minecraftforge.net/maven" }
+		mavenCentral()
+		maven {
+			url = "http://files.minecraftforge.net/maven"
+			// allowInsecureProtocol = true
+		}
 		maven { url "https://plugins.gradle.org/m2/" }
 	}
 	dependencies {
@@ -9,6 +12,7 @@ buildscript {
 		classpath 'gradle.plugin.com.matthewprenger:CurseGradle:1.1.0'
 	}
 }
+
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'com.matthewprenger.cursegradle'
@@ -41,7 +45,7 @@ repositories {
 }
 
 dependencies {
-	compile "mezz.jei:jei_${mc_version}:${jei_version}"
+	implementation "mezz.jei:jei_${mc_version}:${jei_version}"
 }
 
 processResources {
