@@ -25,3 +25,7 @@ And `ftblib_version=5.+` line in your `gradle.properties` file. You can also spe
 
 You probably also want to add "required-after:ftblib" or "after:ftblib" in your @Mod's dependencies.
 Most of the APIs don't need hard dependency, but things like GUIs won't work without FTBLib loaded
+
+### NOTE:
+openjdk 1.8 DOES NOT WORK! It doesn't include javafx.
+use oricale's jdk instead
